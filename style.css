@@ -8,7 +8,7 @@
   --colore-sfondo: #f5f2e9;
   --colore-testo: #202923;
   --font-testo: "Poppins", Helvetica, sans-serif;
-  --font-titoli: "Lexed Deca", sans-serif;;
+  --font-titoli: "Georgia", sans-serif;
 }
 
 * {
@@ -44,7 +44,7 @@ a:focus-visible {
 }
 
 .site-header {
-  padding: 1.25rem 0;
+  padding: .0rem 0;
   border-bottom: 4px solid #d8d2c5;
 }
 
@@ -186,7 +186,7 @@ h3 {
 }
 
 .site-footer {
-  padding: 1.25rem 0;
+  padding: 1.rem 0;
   border-top: 1px solid #b7c0b7;
   color: #46564b;
   font-size: 0.875rem;
