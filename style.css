@@ -100,18 +100,11 @@ nav a[aria-current="page"] {
     padding: 1rem 0;
   }
 
-  .site-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-  }
-
   nav {
     flex-direction: row;
     align-items: center;
     gap: 1.5rem;
-    margin-top: 0;
+    margin-top: 0.75rem;
   }
 
   nav a {
