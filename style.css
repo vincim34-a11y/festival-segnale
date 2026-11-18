@@ -3,12 +3,12 @@
 
 /* Scelte comuni: ogni regola usa var() per richiamarne il valore. */
 :root {
-  --colore-primario: #984eba;
-  --colore-primario-scuro: #470264;
-  --colore-sfondo: #f5f2e9;
-  --colore-testo: #202923;
-  --font-testo: "Poppins", Helvetica, sans-serif;
-  --font-titoli: "Georgia", sans-serif;
+  --colore-primario: #d2754d;
+  --colore-primario-scuro: #9e462e;
+  --colore-sfondo: #f7f3e8;
+  --colore-testo: #000000;
+  --font-testo: "Montserrat", Helvetica, sans-serif;
+  --font-titoli: "Asimovian", sans-serif;
 }
 
 * {
@@ -44,38 +44,80 @@ a:focus-visible {
 }
 
 .site-header {
-  padding: .0rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0.75rem 0;
+  background: var(--colore-sfondo);
   border-bottom: 4px solid var(--colore-primario);
 }
 
 .brand {
   display: inline-block;
   color: var(--colore-testo);
-  font-size: 1.75rem;
-  font-weight: bold;
-  line-height: 1.2;
+  font-family: var(--font-titoli);
+  font-size: 1.65rem;
+  font-weight: 400;
+  line-height: 1.15;
   text-decoration: none;
 }
 
 .brand span {
   display: block;
-  margin-top: 0.25rem;
-  font-size: 0.875rem;
-  font-weight: normal;
+  margin-top: 0.15rem;
+  font-family: var(--font-testo);
+  font-size: 0.85rem;
+  font-weight: 400;
 }
 
 nav {
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: 0.6rem;
 }
 
 nav a {
-  display: inline-block;
-  margin-right: 1rem;
-  padding: 0.25rem 0;
+  display: block;
+  padding: 0.2rem 0;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 nav a[aria-current="page"] {
-  font-weight: bold;
+  font-weight: 700;
+  color: var(--colore-primario-scuro);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+@media (min-width: 600px) {
+  .site-header {
+    padding: 1rem 0;
+  }
+
+  .site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 0;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 0.25rem 0;
+  }
 }
 
 .intro {
@@ -93,6 +135,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-titoli);
+  font-weight: 400;
   line-height: 1.2;
 }
 
@@ -194,7 +237,7 @@ h3 {
 }
 
 .site-footer {
-  padding: 1.rem 0;
+  padding: 1.5rem 0;
   border-top: 1px solid #b7c0b7;
   color: #46564b;
   font-size: 0.875rem;
@@ -204,6 +247,7 @@ h3 {
   position: absolute;
   top: -6rem;
   left: 1rem;
+  z-index: 1100;
   padding: 0.75rem 1rem;
   background: #ffffff;
   color: var(--colore-testo);
@@ -225,6 +269,8 @@ h3 {
   }
 }
 .luoghi-swiper {
+  position: relative;
+  z-index: 1;
   width: 100%;
   overflow: hidden;
 }
@@ -293,6 +339,8 @@ h3 {
 }
 
 .mappa-container {
+  position: relative;
+  z-index: 1;
   width: 100%;
 }
 
